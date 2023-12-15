@@ -1,0 +1,67 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+
+
+@font-face {
+    font-family: customRegular;
+    src: url('./assets/fonts/Courgette-Regular.ttf');
+    font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+label {
+    font-family: customRegular !important;
+}
+
+button, .input {
+    background: antiquewhite !important;
+    color: brown !important;
+}
+
+input, label {
+    color: brown !important;
+}
+
+label {
+    font-weight: bold !important;
+}
+
+.input {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px !important;
+}
+
+input, .input, .input > div {
+    border-radius: 20px !important;
+}
+
+button {
+    font-size: 1.5em !important;
+    border-radius: 28px !important;
+}
+
+h1 {
+    color: brown !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+    background: antiquewhite !important;
+    border-radius: 50px !important; 
+}
+
+.App {
+    background-size: cover;
+    height: 100vh;
+}
+
+.generated-number-container {
+    h1 {
+        font-size: 9rem;
+    }
+}
