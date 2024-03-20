@@ -1,4 +1,4 @@
-import { Alert, Button, FormGroup, TextField } from "@mui/material";
+import { Alert, Button, FormGroup, FormLabel, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 
 import bg1 from "./assets/bg1.jpg";
@@ -14,7 +14,8 @@ const randomIntFromInterval = (min: number, max: number) => { // min and max inc
 function App() {
     const [min, setMin] = useState<number>(0);
     const [max, setMax] = useState<number>(0);
-    const [generatedNumber, setGeneratedNumber] = useState<number|null>(null);
+    const [count, setCount] = useState<number>(1);
+    const [generatedNumbers, setGeneratedNumbers] = useState<string|null>(null);
     const [error, setError] = useState<string>("");
     const [background, setBackground] = useState<string>("");
 
@@ -30,10 +31,13 @@ function App() {
 
     const handleSubmit = (e:any) => {
         e.preventDefault();
-        const randomNumber = randomIntFromInterval(min, max);
+        const randomNumbers = [];
+        for (let i = 0; i < count; i++) {
+            randomNumbers.push(randomIntFromInterval(min, max));
+        }
         if (min <= max) {
             setError("");
-            setGeneratedNumber(randomNumber);
+            setGeneratedNumbers(randomNumbers.join(", "));
         } else {
             setError("A minimum értéknek kisebbnek kell lennie a maximumnál!");
         }
@@ -45,6 +49,9 @@ function App() {
                 <FormGroup>
                     <TextField className="input" type="number" value={min} onChange={(e) => setMin(parseInt(e.target.value))} label="Min" />
                     <TextField className="input mt-3" type="number" value={max} onChange={(e) => setMax(parseInt(e.target.value))} label="Max" />
+
+                    <FormLabel className="mt-3">Hány darab számot generáljon?</FormLabel>
+                    <input className="input mt-1" type="number" value={count} min="1" onChange={(e) => setCount(parseInt(e.target.value))} />
                 </FormGroup>
                 <Button className="mt-5" variant="contained" type="submit">Generálás</Button>
             </form>
@@ -53,9 +60,9 @@ function App() {
                 <Alert className="mt-3" severity="warning">{error}</Alert>
             }
 
-            {(generatedNumber !== null && generatedNumber >= 0) && 
+            {(generatedNumbers !== null && generatedNumbers !== "") && 
                 <div className="generated-number-container mt-5 text-center">
-                    <h1>{generatedNumber}</h1>
+                    <h1>{generatedNumbers}</h1>
                 </div>
             }
         </div>
