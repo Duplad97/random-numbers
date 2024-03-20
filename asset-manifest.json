@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/random-numbers/static/css/main.33daadff.css",
-    "main.js": "/random-numbers/static/js/main.a678a5e8.js",
+    "main.css": "/random-numbers/static/css/main.94be53de.css",
+    "main.js": "/random-numbers/static/js/main.bbcc4b8b.js",
     "static/js/787.eda1c332.chunk.js": "/random-numbers/static/js/787.eda1c332.chunk.js",
     "static/media/bg2.jpg": "/random-numbers/static/media/bg2.9e5e8f517af68133d207.jpg",
     "static/media/bg1.jpg": "/random-numbers/static/media/bg1.16afc78655b3f93d3f28.jpg",
@@ -10,12 +10,12 @@
     "static/media/bg5.jpg": "/random-numbers/static/media/bg5.ff9164f5c703b600759d.jpg",
     "static/media/Courgette-Regular.ttf": "/random-numbers/static/media/Courgette-Regular.f99d9948a486f6270149.ttf",
     "index.html": "/random-numbers/index.html",
-    "main.33daadff.css.map": "/random-numbers/static/css/main.33daadff.css.map",
-    "main.a678a5e8.js.map": "/random-numbers/static/js/main.a678a5e8.js.map",
+    "main.94be53de.css.map": "/random-numbers/static/css/main.94be53de.css.map",
+    "main.bbcc4b8b.js.map": "/random-numbers/static/js/main.bbcc4b8b.js.map",
     "787.eda1c332.chunk.js.map": "/random-numbers/static/js/787.eda1c332.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33daadff.css",
-    "static/js/main.a678a5e8.js"
+    "static/css/main.94be53de.css",
+    "static/js/main.bbcc4b8b.js"
   ]
 }
