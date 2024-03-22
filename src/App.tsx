@@ -31,9 +31,13 @@ function App() {
 
     const handleSubmit = (e:any) => {
         e.preventDefault();
-        const randomNumbers = [];
+        const randomNumbers:number[] = [];
         for (let i = 0; i < count; i++) {
-            randomNumbers.push(randomIntFromInterval(min, max));
+            let random = randomIntFromInterval(min, max);
+            while (randomNumbers.includes(random)) {
+                random = randomIntFromInterval(min, max);
+            }
+            randomNumbers.push(random);
         }
         if (min <= max) {
             setError("");
